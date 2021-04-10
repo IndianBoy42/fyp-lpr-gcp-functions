@@ -6,7 +6,7 @@ import numpy as np
 from PIL import Image
 import cv2
 import requests
-from yolov5.azure import proc, init
+from yolov5.helpers import proc, init
 from yolov5.utils.datasets import letterbox
 from google.cloud import storage
 from tempfile import NamedTemporaryFile
@@ -54,7 +54,7 @@ def run_lpr(event, context):
     # Convert
     img = img[:, :, ::-1].transpose(2, 0, 1)  # BGR to RGB, to bsx3x416x416
     img = np.ascontiguousarray(img)
-    im0s = image  # source size image
+    im0s = [image]  # source size image
 
     res = proc(img, im0s, view_img=False)
 
