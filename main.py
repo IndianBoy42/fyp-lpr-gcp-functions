@@ -60,7 +60,7 @@ def run_lpr(event, context):
 
     with NamedTemporaryFile() as temp:
         temp.write(b"hello")
-        temp.write(json.dumps(res))
+        temp.write(json.dumps(res).encode())
 
         temp.flush()
 
