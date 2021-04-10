@@ -40,10 +40,14 @@ def run_lpr(event, context):
     source_blob = source_bucket.get_blob(filename)
 
     with NamedTemporaryFile() as temp:
-        print("Hello World", file=temp)
+        temp.write(b"hello")
 
         dest_filename = filename
         dest_bucket_name = "yolov5-output"
         dest_bucket = client.get_bucket(dest_bucket_name)
         dest_blob = dest_bucket.blob(dest_filename)
-        dest_blob.upload_from_filename(temp)
+        dest_blob.upload_from_filename(temp.name)
+
+
+if __name__ == "__main__":
+    run_lpr({"name": "ALE03072.JPG"}, None)
