@@ -1,3 +1,7 @@
+import sys
+
+sys.path.append("yolov5")
+
 import numpy as np
 from PIL import Image
 import cv2
