@@ -50,8 +50,9 @@ def run_lpr(event, context):
     img = letterbox(image, new_shape=imgsz_detect)[0]
     # Stack
     img = np.stack(img, 0)
+    print(img.shape, img.dtype)
     # Convert
-    img = img[:, :, :, ::-1].transpose(0, 3, 1, 2)  # BGR to RGB, to bsx3x416x416
+    img = img[:, :, ::-1].transpose(2, 0, 1)  # BGR to RGB, to bsx3x416x416
     img = np.ascontiguousarray(img)
     im0s = image  # source size image
 
