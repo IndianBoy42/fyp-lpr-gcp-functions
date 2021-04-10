@@ -7,6 +7,6 @@
 	remote = https://github.com/IndianBoy42/yolov5.git
 	branch = hklpr
 	commit = 8e4eceaa55b23b7766335243e8f8a32ad6570572
-	parent = ccb086eb23c6a5b76cccd64f6fe6da15495b90bc
+	parent = b52f15066c2fe103d251b84e5dbd02e8ed23fd04
 	method = merge
 	cmdver = 0.4.3
