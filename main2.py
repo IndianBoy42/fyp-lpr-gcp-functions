@@ -42,7 +42,6 @@ def run_lpr(event, context):
     # Decode
     image = np.asarray(bytearray(source_blob.download_as_string()), dtype="uint8")
     image = cv2.imdecode(image, cv2.IMREAD_UNCHANGED)
-
     # Letterbox
     img = letterbox(image, new_shape=imgsz_detect)[0]
     # Stack
@@ -50,7 +49,6 @@ def run_lpr(event, context):
     # Convert
     img = img[:, :, :, ::-1].transpose(0, 3, 1, 2)  # BGR to RGB, to bsx3x416x416
     img = np.ascontiguousarray(img)
-
     im0s = image  # source size image
 
     res = proc(img, im0s, view_img=False)
