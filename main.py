@@ -42,6 +42,8 @@ def run_lpr(event, context):
     with NamedTemporaryFile() as temp:
         temp.write(b"hello")
 
+        temp.flush()
+
         dest_filename = filename
         dest_bucket_name = "yolov5-output"
         dest_bucket = client.get_bucket(dest_bucket_name)
@@ -50,4 +52,4 @@ def run_lpr(event, context):
 
 
 if __name__ == "__main__":
-    run_lpr({"name": "ALE03072.JPG"}, None)
+    run_lpr({"name": "ALE03072.JPG", "bucket": "yolov5-input"}, None)

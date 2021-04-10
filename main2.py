@@ -55,11 +55,14 @@ def run_lpr(event, context):
 
     res = proc(img, im0s, view_img=False)
 
+    outfilename = None
     with NamedTemporaryFile() as temp:
         temp.write(json.dumps(res))
 
-        dest_filename = file["name"]
-        dest_bucket_name = "yolov5-output"
-        dest_bucket = client.get_bucket(dest_bucket_name)
-        dest_blob = dest_bucket.blob(dest_filename)
-        dest_blob.upload_from_filename(temp)
+        outfilename = temp.name
+
+    dest_filename = filename
+    dest_bucket_name = "yolov5-output"
+    dest_bucket = client.get_bucket(dest_bucket_name)
+    dest_blob = dest_bucket.blob(dest_filename)
+    dest_blob.upload_from_filename(temp.name)
