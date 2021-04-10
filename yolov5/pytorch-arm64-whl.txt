@@ -1,0 +1,1 @@
+https://github.com/Kashu7100/pytorch-armv7l

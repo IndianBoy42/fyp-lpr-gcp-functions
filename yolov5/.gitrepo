@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/IndianBoy42/yolov5.git
+	branch = hklpr
+	commit = 8e4eceaa55b23b7766335243e8f8a32ad6570572
+	parent = ccb086eb23c6a5b76cccd64f6fe6da15495b90bc
+	method = merge
+	cmdver = 0.4.3
