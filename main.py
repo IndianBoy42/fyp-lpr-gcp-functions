@@ -1,34 +1,17 @@
 import sys
-
 sys.path.append("yolov5")
-
 import numpy as np
 from PIL import Image
 import cv2
 import requests
-from yolov5.helpers import proc, init
+from yolov5.helpers import *
 from yolov5.utils.datasets import letterbox
 from google.cloud import storage
 from tempfile import NamedTemporaryFile
 import json
 
-imgsz_detect = 640
-imgsz_recog = 224
-device = "cpu"
-
-augment = False
-conf_thres_detect = 0.5
-iou_thres_detect = 0.3
-classes_detect = None
-conf_thres_recog = 0.5
-iou_thres_recog = 0.5
-classes_recog = None
-agnostic_nms = False
-
-
 # Global initialization might be cached
 init()  # Initialize LPR
-
 
 def run_lpr(event, context):
     """Triggered by a change to a Cloud Storage bucket.
