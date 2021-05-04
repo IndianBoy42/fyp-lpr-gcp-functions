@@ -1,6 +1,10 @@
 # FYP LPR GCP Function
 
-## Compute Engine
+## Compute Engine (`server.py`)
+
+```
+python server.py
+```
 
 Access to a configurable Virtual Machine
 
@@ -11,8 +15,7 @@ Easier to deploy a single instance as you have SSH access
 Setup
 ```
 # install dependencies
-sudo apt install build-essential python3 python3-pip python3-pip python3-dev
-cd fyp-lpr-gc-functions
+sudo apt install build-essential python3 python3-pip python3-venv python3-dev
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt # if py37
@@ -20,10 +23,10 @@ pip install -r requirements.txt # if py37
 
 If you have python 3.8 installed use:
 ```
-pip install -r requirements38.txt # if py37
+pip install -r requirements38.txt # if py38
 ```
 
-## Cloud Function
+## Cloud Functions (`main.py`)
 
 Serverless, weak CPU but automatically scalable, 
 
