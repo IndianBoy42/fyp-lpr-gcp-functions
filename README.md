@@ -1,4 +1,4 @@
-# FYP LPR GCP Function
+# FYP LPR Google Cloud Platform
 
 ## Compute Engine (`server.py`)
 
