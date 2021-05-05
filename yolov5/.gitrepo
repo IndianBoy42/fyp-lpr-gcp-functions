@@ -6,7 +6,7 @@
 [subrepo]
 	remote = https://github.com/IndianBoy42/yolov5.git
 	branch = hklpr
-	commit = ff8e4c2becccf8f53ec8f023f0ca968f45ce5b39
-	parent = 328a6a7c5b59ff0bfa3afe694f49975cbae9d854
+	commit = 26e4ea300356c927d35bb1ad8b98a50cb47b31b2
+	parent = 6a31da074750f0fd726185a36545f1e82bae5242
 	method = merge
 	cmdver = 0.4.3
